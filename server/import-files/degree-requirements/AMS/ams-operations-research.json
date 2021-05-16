@@ -1,0 +1,158 @@
+{
+    "department": "AMS",
+    "track": "Operations Research",
+    "semester": "Spring",
+    "year": 2021,
+    "requirements": [
+        {
+            "credits": {
+                "overall": 30
+            },
+            "desc": "30 graduate credits overall"
+        },
+        {
+            "GPA": {
+                "overall": 3.0,
+                "requiredOverall": 3.0,
+                "creditsAbove": {
+                    "GPA": 3.0,
+                    "count": 18
+                }
+            },
+            "desc": "3.0 GPA overall, 3.0 GPA in core courses, 3.0 in 18 credits"
+        },
+        {
+            "required": [
+                "AMS 507"
+            ],
+            "desc": "required course: AMS 507"
+        },
+        {
+            "required": [
+                "AMS 510"
+            ],
+            "desc": "required course: AMS 510"
+        },
+        {
+            "required": [
+                "AMS 540"
+            ],
+            "desc": "required course: AMS 540"
+        },
+        {
+            "required": [
+                "AMS 550"
+            ],
+            "desc": "required course: AMS 550"
+        },
+        {
+            "required": [
+                "AMS 553",
+                "CSE 529"
+            ],
+            "desc": "required course: AMS 553 or CSE 529"
+        },
+        {
+            "required": [
+                "AMS 595"
+            ],
+            "desc": "required course: AMS 595"
+        },
+        {
+            "elective": [
+                "AMS 570",
+                "AMS 571",
+                "AMS 572",
+                "AMS 573",
+                "AMS 575",
+                "AMS 577",
+                "AMS 578",
+                "AMS 580",
+                "AMS 581",
+                "AMS 582",
+                "AMS 583",
+                "AMS 585",
+                "AMS 586",
+                "AMS 542",
+                "CSE 548",
+                "AMS 544",
+                "AMS 545",
+                "AMS 546",
+                "AMS 547",
+                "AMS 552",
+                "AMS 554",
+                "AMS 555",
+                "AMS 556"
+            ],
+            "desc": "1 elective, can be substituted by AMS 570-586"
+        },
+        {
+            "elective": [
+                "AMS 511",
+                "AMS 512",
+                "AMS 513",
+                "AMS 514",
+                "AMS 515",
+                "AMS 516",
+                "AMS 517",
+                "AMS 518",
+                "AMS 522",
+                "AMS 523",
+                "AMS 542",
+                "CSE 548",
+                "AMS 544",
+                "AMS 545",
+                "AMS 546",
+                "AMS 547",
+                "AMS 552",
+                "AMS 554",
+                "AMS 555",
+                "AMS 556"
+            ],
+            "desc": "1 elective, can be substituted by AMS 511-523"
+        },
+        {
+            "elective": [
+                "AMS 542",
+                "CSE 548",
+                "AMS 544",
+                "AMS 545",
+                "AMS 546",
+                "AMS 547",
+                "AMS 552",
+                "AMS 554",
+                "AMS 555",
+                "AMS 556"
+            ],
+            "desc": "1 elective"
+        },
+        {
+            "elective": [
+                "AMS 570",
+                "AMS 571",
+                "AMS 572",
+                "AMS 573",
+                "AMS 575",
+                "AMS 577",
+                "AMS 578",
+                "AMS 580",
+                "AMS 581",
+                "AMS 582",
+                "AMS 583",
+                "AMS 585",
+                "AMS 586",
+                "AMS 542",
+                "CSE 548",
+                "AMS 544",
+                "AMS 545",
+                "AMS 546",
+                "AMS 547",
+                "AMS 552",
+                "AMS 554",
+                "AMS 555",
+                "AMS 556"
+            ],
+            "desc": "1 elective"
+        }
+    ]
+}

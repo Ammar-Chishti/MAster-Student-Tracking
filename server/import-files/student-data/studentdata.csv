@@ -1,0 +1,30 @@
+sbu_id,first_name,last_name,email,department,track,entry_semester,entry_year,requirement_version_semester,requirement_version_year,graduation_semester,graduation_year,password
+12345,Chester,Testdata,chester.huang@stonybrook.edu,AMS,Statistics,Spring,2021,Spring,2021,Spring,2023,password
+12346,Linus,van Pelt,lvanpelt@stonybrook.edu,AMS,statistics,Fall,2020,Fall,2020,Fall,2021,password
+12347,Bob,Testdata,bobtest@stonybrook.edu,AMS,statistics,Spring,2021,Spring,2021,Spring,2023,password
+22222,Charles,Brown,cbrown@stonybrook.edu,CSE,special project,Fall,2020,Fall,2020,Spring,2021,password
+33333,Peppermint,"Patty, Jr",ppatty@stonybrook.edu,BMI,Clinical Informatics with thesis,Spring,2021,Spring,2021,Spring,2022,password
+
+123451,Alice,Testdata,alice1@stonybrook.edu,CSE,advanced project,Spring,2021,Spring,2021,Spring,2023,password
+123452,BAlice,Testdata,alice2@stonybrook.edu,CSE,advanced project,Spring,2021,Spring,2021,Spring,2023,password
+123453,CAlice,Testdata,alice3@stonybrook.edu,CSE,advanced project,Spring,2021,Spring,2021,Spring,2023,password
+123454,DAlice,Testdata,alice4@stonybrook.edu,CSE,advanced project,Spring,2021,Spring,2021,Spring,2023,password
+123455,EAlice,Testdata,alice5@stonybrook.edu,CSE,advanced project,Spring,2021,Spring,2021,Spring,2023,password
+123456,GAlice,Testdata,alice6@stonybrook.edu,CSE,advanced project,Spring,2021,Spring,2021,Spring,2023,password
+123457,ZAlice,0Testdata,alice7@stonybrook.edu,CSE,advanced project,Spring,2021,Spring,2021,Spring,2023,password
+123458,FAlice,1Testdata,alice8@stonybrook.edu,CSE,advanced project,Spring,2021,Spring,2021,Spring,2023,password
+123459,Alice,2Testdata,alice9@stonybrook.edu,CSE,advanced project,Spring,2021,Spring,2021,Spring,2023,password
+123450,Alice,5Testdata,alice0@stonybrook.edu,BMI,Translational Bioinformatics with project,Spring,2021,Spring,2021,Spring,2023,password
+1234511,Alice,4Testdata,alice11@stonybrook.edu,BMI,Translational Bioinformatics with project,Spring,2021,Spring,2021,Spring,2023,password
+1234512,Alice,3Testdata,alice12@stonybrook.edu,BMI,Translational Bioinformatics with project,Spring,2021,Spring,2021,Spring,2023,password
+1234513,Alice,Testdata,alice13@stonybrook.edu,BMI,Translational Bioinformatics with project,Spring,2021,Spring,2021,Spring,2023,password
+1123459,Alice,2Testdata,alice9@stonybrook.edu,BMI,Translational Bioinformatics with project,Spring,2021,Spring,2021,Spring,2023,password
+1223450,Alice,5Testdata,alice0@stonybrook.edu,BMI,Translational Bioinformatics with project,Spring,2021,Spring,2021,Spring,2023,password
+13234511,Alice,4Testdata,alice11@stonybrook.edu,BMI,Translational Bioinformatics with project,Spring,2021,Spring,2021,Spring,2023,password
+14234512,Alice,3Testdata,alice12@stonybrook.edu,BMI,Translational Bioinformatics with project,Spring,2021,Spring,2021,Spring,2023,password
+15234513,Alice,Testdata,alice13@stonybrook.edu,BMI,Translational Bioinformatics with project,Spring,2021,Spring,2021,Spring,2023,password
+1263459,Alice,2Testdata,alice9@stonybrook.edu,BMI,Translational Bioinformatics with project,Spring,2021,Spring,2021,Spring,2023,password
+126663450,Alice,5Testdata,alice0@stonybrook.edu,BMI,Translational Bioinformatics with project,Spring,2021,Spring,2021,Spring,2023,password
+12345611,Alice,4Testdata,alice11@stonybrook.edu,BMI,Translational Bioinformatics with project,Spring,2021,Spring,2021,Spring,2023,password
+12345712,Alice,3Testdata,alice12@stonybrook.edu,BMI,Translational Bioinformatics with project,Spring,2021,Spring,2021,Spring,2023,password
+12384513,Alice,Testdata,alice13@stonybrook.edu,BMI,Translational Bioinformatics with project,Spring,2021,Spring,2021,Spring,2023,password

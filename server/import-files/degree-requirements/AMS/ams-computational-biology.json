@@ -1,0 +1,104 @@
+{
+    "department": "AMS",
+    "track": "Computational Biology",
+    "semester": "Spring",
+    "year": 2021,
+    "requirements": [
+        {
+            "credits": {
+                "overall": 30
+            },
+            "desc": "30 graduate credits overall"
+        },
+        {
+            "GPA": {
+                "overall": 3.0,
+                "requiredOverall": 3.0,
+                "creditsAbove": {
+                    "GPA": 3.0,
+                    "count": 18
+                }
+            },
+            "desc": "3.0 GPA overall, 3.0 GPA in core courses, 3.0 in 18 credits"
+        },
+        {
+            "required": [
+                "AMS 507"
+            ]
+        },
+        {
+            "required": [
+                "AMS 510"
+            ]
+        },
+        {
+            "required": [
+                "MCB 520",
+                "CHE 541"
+            ]
+        },
+        {
+            "required": [
+                "AMS 533"
+            ]
+        },
+        {
+            "required": [
+                "AMS 535"
+            ]
+        },
+        {
+            "required": [
+                "AMS 537"
+            ]
+        },
+        {
+            "required": [
+                "AMS 539"
+            ]
+        },
+        {
+            "required": [
+                "CSE 549"
+            ]
+        },
+        {
+            "required": [
+                "AMS 532"
+            ]
+        },
+        {
+            "elective": [
+                "AMS 530",
+                "AMS 534",
+                "AMS 536",
+                "AMS 548",
+                "CHE 528",
+                "CSE 523",
+                "PHY 558"
+            ]
+        },
+        {
+            "elective": [
+                "AMS 530",
+                "AMS 534",
+                "AMS 536",
+                "AMS 548",
+                "CHE 528",
+                "CSE 523",
+                "PHY 558"
+            ]
+        },
+        {
+            "elective": [
+                "AMS 530",
+                "AMS 534",
+                "AMS 536",
+                "AMS 548",
+                "CHE 528",
+                "CSE 523",
+                "PHY 558"
+            ]
+        }
+    ]
+}

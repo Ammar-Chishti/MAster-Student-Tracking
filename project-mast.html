@@ -1,0 +1,191 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+</head>
+
+<body lang=EN-US>
+
+<center>
+<h3>Project: MAster's Student Tracking (MAST)</h3>
+CSE 416-02: Software Engineering, Spring 2021<br>
+Professor Scott D. Stoller<br>
+version: 2021-04-27
+</center>
+
+<hr>
+<h3>1. Goal</h3>
+
+this system will help M.S. students and graduate program directors (GPDs) determine whether students are on track to satisfy the degree requirements by their planned graduation date.
+the system will also help departmental administrative staff know when to clear a student for graduation.
+
+<hr>
+<h3>2. Degree Requirements</h3>
+
+for each degree, the system maintains at least the following information:
+
+<ul>
+  <li>department.  example: Computer Science, AMS</li>
+
+  <li>track.  Some departments (e.g., AMS and BMI) require M.S. students to select a track.</li>
+  
+  <li>requirement version (semester and year).  example: Fall 2020.</li>
+
+  <li>requirements.  the M.S. degree requirements for the specified department (and track, if applicable), as described in the Graduate Bulletin for the indicated semester (and supplemental information on the department website).</li>
+</ul>
+
+<p>the representation of requirements must be sufficiently expressive to express the requirements (all of them, not only course requirements) for at least the following M.S. degrees:</p>
+
+<ul>
+<li><a href="https://www.stonybrook.edu/sb/graduatebulletin/current/academicprograms/ams/requirements.php">Applied Mathematics and Statistics, Spring 2021</a>  </li>
+  
+  <li><a href=" https://www.stonybrook.edu/sb/graduatebulletin/current/academicprograms/bmi/requirements.php">Biomedical Informatics, Spring 2021</a></li>
+
+  <li><a href=" 
+https://www.stonybrook.edu/sb/graduatebulletin/current/academicprograms/ece/requirements.php">Computer Engineering, Spring 2021</a></li>
+ 
+  <li><a href="https://www.stonybrook.edu/sb/graduatebulletin/current/academicprograms/cse/requirements.php ">Computer Science, Spring 2021</a></li>
+</ul>
+
+<p>the requirements are explained in more detail on the departmental websites.</p>
+
+<p><b>Clarifications to Spring 2021 requirements for M.S. in CS:</b> (1) for the special project option, the graduate bulletin includes a complicated condition described in a phrase that starts with "and one credit of research, teaching, or industrial experience that may be satisfied with ...". this condition is not mentioned in the CS Department graduate handbook, so you can ignore it.  also, note that "special project" is called "basic project" in the handbook. (2) proficiency requirements can be specified by the GPD as a list of proficiency courses that the student must take. the CS grad handbook says that CSE580-CSE589 are proficiency courses, and they must be completed with a grade of C or better.  note that CSE587 might need to be taken multiple times, co-scheduled with different undergraduate courses.  your system should allow the GPD to specify the corresponding undergraduate course for each instance of CSE587, but your system does not need to enforce the co-scheduling. [2021-03-08 added this paragraph.]
+</p>
+
+<p>transfer credits should be handled as follows for all departments.  each student's profile contains a list of transfer classes.  each entry in this list has 3 fields: (1) equivalent SBU class, which may have the special value "None", (2) number of credits, and (3) grade.  only a GPD can edit this list.  each grade must be a B or higher.  the entries may sum to at most 12 credits.  transfer classes with an equivalent SBU class are taken into account as usual when checking degree requirements, except that the grades are ignored when checking GPA requirements.  transfer classes without an equivalent SBU class are used only when checking minimum number of credits requirements. note that the format for student information files does not include lists of transfer classes, so those lists are populated only through editing by GPDs.  [2021-04-05 added this paragraph.]</p>
+
+<hr>
+<h3>3. Course Offerings and Prerequisites</h3>
+
+<p>the system maintains the following information about course offerings: course identifier (e.g., CSE 507), course name, semester (Fall, Winter, Spring, SummerI, or SummerII), year, and timeslot.  the system also maintains information about course prerequisites that are graduate courses.  other kinds of prerequisites, such as an undergraduate course or equivalent experience, are ignored. </p>
+
+<p>You can ignore Winter semester.  there are no significant Winter course offerings for the degree programs of interest here. [2021-04-27 added this]</p>
+
+<hr>
+<h3>4. Student Information</h3>
+
+<p>the system maintains at least the following information about each student:</p>
+
+<ul>
+  <li>department and track (if applicable).</li>
+
+  <li>entry semester: the semester the student entered the university (or returned from the most recent leave of absence).</li>
+
+  <li>requirement version: the version of the degree requirements that the student wishes to satisfy.  university policy requires: requirement version &ge; entry semester.</li>
+
+  <li>graduation semester: expected semester of graduation.  most M.S. students finish in 3 semesters; some take 4 semesters.</li>
+  
+  <li>course plan: a list of courses the student has taken, is currently taking, or plans to take, with appropriate details about each (e.g., grades of completed courses).</li>
+
+  <li>other relevant information, depending on the department and track, e.g., project option, faculty advisor for project or thesis, proficiency requirements and a plan to satisfy them.</li>
+  
+  <li>graduated: a boolean indicating whether the student has graduated.</li>
+  
+  <li>comments: comments about a student's progress, course plan, etc.  the comments are visible to this student and the GPD.</li>
+</ul>
+
+<p>based on this information, each relevant degree requirement has one of the following possible statuses: (1) satisfied: satisfied by completed courses; (2) pending: will be satisfied if the student follows the displayed course plan and completes the courses with sufficiently high grades; (3) unsatisfied: neither satisfied nor pending.   the course plan is "complete" if all relevant requirements are satisfied or pending.</p>
+
+<p>a student's course plan may contain courses in semesters for which course offering data has not yet been imported; until the data is imported, the system assumes that all courses will be offered and free of schedule conflicts. the course offerings for a semester may change when an updated file covering that semester is imported.  in both cases, importing of course offerings may cause some planned course to be unavailable (not offered).  the system marks these invalid entries (so the GPD or student will know to fix them), displays a list of affected students and their invalid course plan entries, and notifies those students by email.</p>
+
+<p>similarly, a student's course plan may contain courses in semesters for which course descriptions have not yet been imported; until the data is imported, the system assumes that the most recent course descriptions preceding those semesters continue to hold.<p>
+  
+<hr>
+<h3>5. Functionality For Graduate Program Director</h3>
+
+<p><b>5.1 scrape course information.</b> the user uploads a file containing official SBU course descriptions, and specifies which semester and year it is for (ignore the semester and year in the page header in the pdf file) [2021-03-11 added this remark]), and which departments to scrape from it.  the system must support uploading of course descriptions in one of the following two formats (it does not need to support both): (1) PDF file, or (2) text file created by saving the PDF as a text file (e.g., using the free Acrobat Reader DC) [2021-03-15 added this sentence].  the system scrapes from it information about graduate courses offered in those departments in that semester.  note that course information may change each semester, although usually only a handful of courses are affected.  the current version of that PDF file is available from the <a href="https://www.stonybrook.edu/sb/graduatebulletin/current/">Graduate Bulletin Home Page</a>; older versions are available from the 
+<a href="https://www.stonybrook.edu/sb/graduatebulletin/current/archives.php">Graduate Bulletin Archive</a>.  specifically, the name, description, number of credits, and prerequisites that are graduate courses are scraped.  this information should be displayed or easily accessible where appropriate throughout the program, for ease of use.</p>
+
+<p>Note: ... [2021-03-15 deleted the note that was here]</p>
+
+<p>in the graduate bulletin, entries for some courses, e.g., CSE 538, lack description, prerequisites, number of credits, etc.  Assume such courses are 3 credits and have no graduate-course prerequisites, since this is the most common case [2020-04-07 added this sentence]</p>
+
+<p><b>5.2 import degree requirements.</b>  import a text-based (e.g., XML or JSON) file containing degree requirements.  existing requirements for the degree versions mentioned in the file are overwritten.  you design and document a schema for the file.  you can manually write the requirements for the specified degrees in your schema; scraping them from the graduate bulletin would be difficult.</p>
+
+<p>note (applies to all file import functions in this system): the file is uploaded from a client, not assumed to exist on the server.</p>
+
+<p><b>5.3 import course offerings.</b>  import a file describing course offerings.   all existing course offering data for semesters covered by the imported file are deleted, since the file is expected to include complete course offering data for each semester mentioned in the file.  the file must be in csv format with the header row shown below; some example data rows are also shown.  section numbers and timeslots are formatted exactly as they appear on SBU Class Find.  the section field may be empty; it's usually unimportant, since few graduate classes have multiple sections.  the timeslot field may be empty; in that case, the system optimistically assumes that the course never creates schedule conflicts.</p>
+
+<p>department,course_num,section,semester,year,timeslot<br>
+AMS,537,02,Fall,2020,TUTH 11:30AM-12:50PM<br>
+CSE,537,01,Spring,2021,MW 06:05PM-07:25PM</br>
+CSE,504,,Spring,2021,MF 01:00PM-02:20PM</p>
+
+<p>note (applies to all csv files read by this system): each csv file consists of one header row followed by data rows.  data rows may appear in any order.  strings containing commas are enclosed in quotes; other strings may be enclosed in quotes.</p>
+ 
+<p><b>5.4 delete all student data.</b>  this function exists primarily for convenience when testing.</p>
+ 
+<p><b>5.5 import student data.</b>  import a pair of csv files containing information about students.  all existing information about those students is removed.  this function facilitates testing and supports data migration from existing systems.  the first file, called student profile file, contains selected student information other than the course plan and must be in the following csv format. [2021-02-22 corrected the following sample data]</p>
+
+<p>sbu_id,first_name,last_name,email,department,track,entry_semester,entry_year,requirement_version_semester,requirement_version_year,graduation_semester,graduation_year,password<br>
+111222333,Linus,van Pelt,lvanpelt@stonybrook.edu,AMS,,Fall,2020,Fall,2020,Fall,2021,security_blanket<br>
+222333444,Charles,Brown,cbrown@stonybrook.edu,CSE,special project,Spring,2020,Fall,2020,Spring,2021,WheresMyDog<br>
+333444555,Peppermint,"Patty, Jr",ppatty@stonybrook.edu,BMI,Clinical Informatics with thesis,Spring,2021,Spring,2021,Spring,2022,baseball!!</p>
+    
+<p>the second file, called student course plan file, contains student course plans and must be in the following csv format.  note that some grades may be missing.</p>
+ 
+<p>sbu_id,department,course_num,section,semester,year,grade<br>
+222333444,CSE,537,01,Fall,2020,A-<br>
+111222333,AMS,501,01,Fall,2020,B+<br>
+222333444,CSE,504,,Spring,2021,</p>
+
+<p>[2021-02-22 added the following] the student profile file uses the following names for tracks:</p>
+<ul>
+  <li>AMS.  tracks: Computational Applied Mathematics, Computational Biology, Operations Research, Statistics, Quantitative Finance [2021-03-10 modified this line]</li>
+  <li>BMI.  there are 3 topic areas (Imaging Informatics, Clinical Informatics and Translational Bioinformatics), each with an option for thesis or project.  tracks: Imaging Informatics with thesis, Imaging Informatics with project, etc.</li>
+  <li>ESE.  tracks: non-thesis, thesis</li>
+  <li>CSE.  tracks: advanced project, special project, thesis.  note: ignore the concentration in data science and engineering.</li>
+</ul>
+
+<p>if an imported course plan contains courses with unsatisfied prerequisites, assume those prerequisites have been waived; do not consider the data to be invalid. [2021-02-24 added this] </p>
+
+<p>Don't assume that all entries in imported course plans are valid.  Imported course plans should be validated in the same way as course plans entered via the GUI, by checking for un-offered courses, schedule conflicts, etc. [2021-04-27 added this]</p>
+
+<p>for courses with variable credits, assume the course was taken for 3 credits if 3 is in the allowed range (this is the most common case), otherwise assume it was taken for the minimum number of credits. [2021-04-24 added this]</p>
+
+<p>note: the imported students should be able to login to the system using the given email address (as user name) and password [2021-03-11 added this sentence].  including plaintext passwords in the csv file is unrealistic (insecure).  in deployment, this system would use the university's SSO system for authentication.  we adopt an unrealistically simple approach to account management and authentication in this system in order to test and evaluate the system prior to such integration.</p>
+
+<p><b>5.6 import grades.</b> this function is run to update course plans with grades earned during the semester.  it imports grades from a file that must be in the same format as a student course plan file.  note that the import grades function, unlike the import student data function, does not delete any existing student data.</p>
+
+<p><b>5.7 add student.</b>  add a student to the system, and enter data about them.</p>
+ 
+<p><b>5.8 browse/search for students.</b>  view a table showing summary information about students.  [2021-02-21 added the next sentence.]  the summary information should include (among other things) the number of degree requirements having each of the three possible statuses (e.g., 5 satisfied, 3 pending, 2 unsatisfied).  click on an entry to view/edit that student's detailed information.  the list can be sorted in various ways, including by student name, graduation semester, and number of semesters in the program (for students who have not yet graduated).  the list can be filtered in various ways, including student name (partial match), graduation semester, course plan validity, and course plan completeness.  for example, the GPD might want to list the students who plan to graduate in the coming semester and whose course plan is incomplete.</p>
+
+<p>for the summary information, requirements are counted as follows.  for requirements involving core (mandatory) and elective courses are counted, each such course is counted as a separate requirement, to provide more fine-grained measurement of progress.  for example, if a student needs to take 5 core courses and 4 electives, there are 9 requirements to be satisfied.  a project or thesis counts as 1 requirement, even if it is satisfied by taking multiple courses, e.g., CSE advanced project requirement is satisfied by taking CSE 523 and CSE 524, and the BMI/CSE/ESE thesis requirement is satisfied by taking at least 6 credits of BMI/CSE/ESE 599, which is usually (though not necessarily) done by taking that course twice for 3 credits each.  GPA requirement counts as 1 requirement, even if it is multi-faceted, e.g., even if it imposes minimums on both cumulative GPA and departmental GPA.  number-of-credits requirement counts as 1 requirement. [2021-03-13 added this paragraph]</p>
+
+<p>note: for filtering to work correctly, information about course plan validity and completeness should always be up-to-date in the database.  thus, it should be updated after data is imported or edited.</p>
+
+<p><b>5.9 view/edit student information.</b>  the view shows all information about a student and clearly shows the status of all relevant degree requirements. the GPD needs to review many student records, so color, layout, etc., should be used to make it easy to quickly see the status of each requirement.  the GPD can edit all information about a student, including the course plan and comments (i.e., the GPD can add and delete comments).  if the GPD tries to add course to the plan when the prerequisites aren't satisfied, the GPD is asked to confirm whether the prerequisite is waived for this student.  after the GPD adds a comment, the system offers to send an email notification to the student. [2021-02-17 for simplicity, the system allows changes to a student's course schedule in any semester for which grades have not yet been imported.  the system does not restrict changes to current or future semesters based on the actual current date.]  [2021-03-11 for semesters with imported grades, the GPD can't edit the course schedule but can edit the grades, to reflect grade changes.]</p>
+
+<p><b>5.10 suggest course plan.</b>  the system extends the selected student's course plan so that all unsatisfied requirements become pending.  to guide the suggestions, the user can specify preferences and constraints, including maximum number of courses to take in each semester (this may vary between semesters), a list of preferred courses, optionally (at the user's discretion) ordered by strength of preference, a list of courses to avoid, and a simple time constraint consisting of a time range that the courses should be within, e.g., 9:00am-6:00pm (for simplicity, only one time range can be specified, and it applies to every day of the week) [2021-03-11 modified this sentence].  classes not in either list may be suggested; they are considered to be ranked just below all classes on the preferred list.  suggestions must be consistent with course offerings, course prerequisites, the student's selected project option (if applicable), etc.  if some requirements cannot be satisfied by the expected graduation semester, the suggested course plan extends to an additional semester in order to satisfy them and is designed to minimize the number of courses in the additional semester.  [2021-03-05 added the following sentence.]  note that graduating on time (i.e., by the expected semester) takes precedence over course preferences; in other words, assume students would rather take courses not on their preference list (provided the courses are not on the "avoid" list) than postpone graduation.  if there are multiple feasible plans with "the best" quality, the system shows (at least) a few of them, and allows the user to select one.  for example, one plan might contain the student's #1 preferred course and  least preferred course (or a course not on the preferred list), while another plan might contain the student's #2 and #3 preferred courses; since it's unclear which is better, the system should show both.  or, two plans with equally preferred courses might differ in which non-preferred courses are included.  the suggested courses in the selected plan are tentatively added to the schedule, marked as suggested; the student or GPD can later approve or reject each suggested course individually, or (for convenience) accept all of them at once.</p>
+
+
+<p>if the user does not specify course preferences (i.e., preferred courses and courses to avoid) to guide the system's suggestions, the user can select "smart suggestion" mode (note that the user can still specify maximum number of courses per semester and a simple time constraint) [2021-03-11 modified this sentence].  in this mode, the suggested course plan is automatically guided by similarity to complete course plans of other students.  in other words, the system identifies other students whose course plan are complete and include most or all of the courses currently in this student's course plan, and then tries to extend this student's course plan with courses that are popular with those other students.</p>
+
+<p><b>5.11 enrollment trends.</b>  the system displays a chart that visualize trends in the past and expected (based on course plans) enrollment of specified courses, for a specified range of semesters.</p>
+
+<hr>
+<h3>6. Functionality For M.S. Students</h3>
+
+<p><b>6.1. view/edit student information.</b>  a student can view all information in their record, and can edit almost all of it, with the following limitations: the student cannot change the SBU ID, delete comments, change the course plan for past semesters, or add courses with unsatisfied prerequisites to the course plan.</p>
+
+<p><b>6.2 suggest course plan.</b>  same functionality as for the GPD.</p>
+
+<hr>
+<h3>7. Other Requirements</h3>
+
+<p><b>7.1 Authentication and access control.</b> All access to the system requires authentication with a password.  Passwords stored in the system database are salted and hashed.  It is sufficient to have one pre-defined GPD account per department, each with a fixed username and password [2021-03-17 modified this sentence].  The GPD for a department can import  degree requirements, course offerings, student data, and grades only for that department, and can view and edit only students in that department; a GPD can scrape course information for any department [2021-04-08 modified this sentence].</p>
+
+<p><b>7.2 Concurrency.</b> Synchronization is used to ensure correct behavior when multiple users access the system concurrently.</p>
+
+<p><b>7.3 Ease of use.</b>  The system provides an easy-to-use, user-friendly web interface consistent with established UI design principles.  The system handles invalid inputs gracefully, provide helpful feedback to the user, etc.  </p>
+
+<p><b>7.4 Multi-host operation.</b>  The client and server can run on different hosts.  "Different hosts" here means "different OS instances".  They can be on the same machine (e.g., with the server running on the host OS on a laptop, and the web browser running on a guest OS in a VM on the same laptop) or different machines.</p>
+
+<p><b>7.5 Network security.</b>  Network communication is secured using HTTPS or SSL.  If your server does not have a public-key certificate signed by a certification authority trusted by the web browser, the web browser will show a security warning.  The warning can be eliminated by creating a self-signed certificate, and installing the key in the browser, but that is optional.  Requiring the user to tell the browser to proceed despite the security warning is acceptable.</p>
+
+<p><b>7.6 Robustness.</b>  The system handles missing or invalid information gracefully. The system validates data read from files or entered through the GUI.</p>
+
+<p><b>7.7 Performance.</b> The system works efficiently for datasets containing several hundred students.</p>
+
+</body>
+</html>

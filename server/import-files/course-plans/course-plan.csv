@@ -1,0 +1,9 @@
+sbu_id,department,course_num,section,semester,year,grade
+11111,CSE,537,01,Spring,2021,A-
+11111,CSE,504,,Spring,2021,
+12345,AMS,504,01,Spring,2021,
+12345,AMS,507,01,Spring,2021,
+12345,AMS,513,01,Spring,2021,
+12345,CSE,541,01,Winter,2021,
+12345,CSE,537,01,Spring,2021,
+

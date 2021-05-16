@@ -1,0 +1,104 @@
+{
+    "department": "AMS",
+    "track": "Computational Applied Mathematics",
+    "semester": "Spring",
+    "year": 2021,
+    "requirements": [
+        {
+            "credits": {
+                "overall": 30
+            },
+            "desc": "30 graduate credits overall"
+        },
+        {
+            "GPA": {
+                "overall": 3.0,
+                "requiredOverall": 3.0,
+                "creditsAbove": {
+                    "GPA": 3.0,
+                    "count": 18
+                }
+            },
+            "desc": "3.0 GPA overall, 3.0 GPA in core courses, 3.0 in 18 credits"
+        },
+        {
+            "required": [
+                "AMS 501"
+            ],
+            "desc": "required course: AMS 501"
+        },
+        {
+            "required": [
+                "AMS 503"
+            ],
+            "desc": "required course: AMS 503"
+        },
+        {
+            "required": [
+                "AMS 510"
+            ],
+            "desc": "required course: AMS 510"
+        },
+        {
+            "required": [
+                "AMS 526"
+            ],
+            "desc": "required course: AMS 526"
+        },
+        {
+            "required": [
+                "AMS 527"
+            ],
+            "desc": "required course: AMS 527"
+        },
+        {
+            "required": [
+                "AMS 528"
+            ],
+            "desc": "required course: AMS 528"
+        },
+        {
+            "required": [
+                "AMS 595",
+                "AMS 561"
+            ],
+            "desc": "required course: AMS 595 or AMS 561"
+        },
+        {
+            "elective": [
+                "AMS 502",
+                "AMS 530",
+                "AMS 542",
+                "AMS 562",
+                "AMS 565",
+                "AMS 566",
+                "AMS 603"
+            ],
+            "desc": "1 elective"
+        },
+        {
+            "elective": [
+                "AMS 502",
+                "AMS 530",
+                "AMS 542",
+                "AMS 562",
+                "AMS 565",
+                "AMS 566",
+                "AMS 603"
+            ],
+            "desc": "1 elective"
+        },
+        {
+            "elective": [
+                "AMS 502",
+                "AMS 530",
+                "AMS 542",
+                "AMS 562",
+                "AMS 565",
+                "AMS 566",
+                "AMS 603"
+            ],
+            "desc": "1 elective"
+        }
+    ]
+}

@@ -1,0 +1,137 @@
+{
+    "department": "AMS",
+    "track": "Quantitative Finance",
+    "semester": "Spring",
+    "year": 2021,
+    "requirements": [
+        {
+            "credits": {
+                "overall": 30
+            },
+            "desc": "30 graduate credits overall"
+        },
+        {
+            "GPA": {
+                "overall": 3.0,
+                "requiredOverall": 3.0,
+                "creditsAbove": {
+                    "GPA": 3.0,
+                    "count": 18
+                }
+            },
+            "desc": "3.0 GPA overall, 3.0 GPA in core courses, 3.0 in 18 credits"
+        },
+        {
+            "required": [
+                "AMS 507"
+            ],
+            "desc": "required course: AMS 507"
+        },
+        {
+            "required": [
+                "AMS 510"
+            ],
+            "desc": "required course: AMS 510"
+        },
+        {
+            "required": [
+                "AMS 511"
+            ],
+            "desc": "required course: AMS 511"
+        },
+        {
+            "required": [
+                "AMS 512"
+            ],
+            "desc": "required course: AMS 512"
+        },
+        {
+            "required": [
+                "AMS 513"
+            ],
+            "desc": "required course: AMS 513"
+        },
+        {
+            "required": [
+                "AMS 514"
+            ],
+            "desc": "required course: AMS 514"
+        },
+        {
+            "required": [
+                "AMS 516"
+            ],
+            "desc": "required course: AMS 516"
+        },
+        {
+            "required": [
+                "AMS 517"
+            ],
+            "desc": "required course: AMS 517"
+        },
+        {
+            "required": [
+                "AMS 518"
+            ],
+            "desc": "required course: AMS 518"
+        },
+        {
+            "required": [
+                "AMS 572"
+            ],
+            "desc": "required course: AMS 572"
+        },
+        {
+            "elective": [
+                "AMS 515",
+                "AMS 522",
+                "AMS 523",
+                "AMS 526",
+                "AMS 527",
+                "AMS 528",
+                "AMS 530",
+                "AMS 540",
+                "AMS 542",
+                "AMS 550",
+                "AMS 553",
+                "AMS 560",
+                "AMS 561",
+                "AMS 562",
+                "AMS 569",
+                "AMS 570",
+                "AMS 578",
+                "AMS 580",
+                "AMS 588",
+                "AMS 595",
+                "AMS 603"
+            ],
+            "desc": "1 elective"
+        },
+        {
+            "elective": [
+                "AMS 515",
+                "AMS 522",
+                "AMS 523",
+                "AMS 526",
+                "AMS 527",
+                "AMS 528",
+                "AMS 530",
+                "AMS 540",
+                "AMS 542",
+                "AMS 550",
+                "AMS 553",
+                "AMS 560",
+                "AMS 561",
+                "AMS 562",
+                "AMS 569",
+                "AMS 570",
+                "AMS 578",
+                "AMS 580",
+                "AMS 588",
+                "AMS 595",
+                "AMS 603"
+            ],
+            "desc": "1 elective"
+        }
+    ]
+}

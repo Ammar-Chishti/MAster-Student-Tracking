@@ -1,0 +1,141 @@
+{
+    "department": "CSE",
+    "track": "Advanced project",
+    "semester": "Spring",
+    "year": 2021,
+    "requirements": [
+        {
+            "credits": {
+                "department": 31
+            },
+            "desc": "31 CSE graduate credits"
+        },
+        {
+            "GPA": {
+                "department": 3.0
+            },
+            "desc": "3.0 GPA in CSE courses"
+        },
+        {
+            "lectures": {
+                "count": 8,
+                "except": {
+                    "course": "CSE 698",
+                    "credits": 3
+                },
+                "list": [
+                    "CSE 502",
+                    "CSE 504",
+                    "CSE 505",
+                    "CSE 506",
+                    "CSE 507",
+                    "CSE 508",
+                    "CSE 509",
+                    "CSE 510",
+                    "CSE 511",
+                    "CSE 512",
+                    "CSE 514",
+                    "CSE 515",
+                    "CSE 516",
+                    "CSE 517",
+                    "CSE 518",
+                    "CSE 519",
+                    "CSE 521",
+                    "CSE 525",
+                    "CSE 526",
+                    "CSE 527",
+                    "CSE 528",
+                    "CSE 529",
+                    "CSE 530",
+                    "CSE 531",
+                    "CSE 532",
+                    "CSE 533",
+                    "CSE 534",
+                    "CSE 535",
+                    "CSE 536",
+                    "CSE 537",
+                    "CSE 538",
+                    "CSE 540",
+                    "CSE 541",
+                    "CSE 542",
+                    "CSE 544",
+                    "CSE 545",
+                    "CSE 546",
+                    "CSE 547",
+                    "CSE 548",
+                    "CSE 549",
+                    "CSE 550",
+                    "CSE 551",
+                    "CSE 552",
+                    "CSE 555",
+                    "CSE 564",
+                    "CSE 566",
+                    "CSE 570",
+                    "CSE 577",
+                    "CSE 590",
+                    "CSE 591",
+                    "CSE 592",
+                    "CSE 594",
+                    "CSE 595",
+                    "CSE 602",
+                    "CSE 605",
+                    "CSE 608",
+                    "CSE 610",
+                    "CSE 613",
+                    "CSE 614",
+                    "CSE 615",
+                    "CSE 617",
+                    "CSE 620",
+                    "CSE 621",
+                    "CSE 624",
+                    "CSE 625",
+                    "CSE 626",
+                    "CSE 628",
+                    "CSE 633",
+                    "CSE 638"
+                ]
+            },
+            "desc": "7 graduate lecture courses"
+        },
+        {
+            "project": [
+                "CSE 523",
+                "CSE 524"
+            ],
+            "desc": "Advanced project: CSE 523 and 524"
+        },
+        {
+            "breadth": [
+                [
+                    "CSE 502",
+                    "CSE 504",
+                    "CSE 506",
+                    "CSE 508",
+                    "CSE 509",
+                    "CSE 532",
+                    "CSE 534",
+                    "CSE 535"
+                ],
+                [
+                    "CSE 505",
+                    "CSE 519",
+                    "CSE 527",
+                    "CSE 528",
+                    "CSE 537",
+                    "CSE 538",
+                    "CSE 564"
+                ],
+                [
+                    "CSE 512",
+                    "CSE 526",
+                    "CSE 540",
+                    "CSE 541",
+                    "CSE 547",
+                    "CSE 548",
+                    "CSE 549"
+                ]
+            ],
+            "desc": "1 class each in theory, systems, and information-intelligent systems"
+        }
+    ]
+}

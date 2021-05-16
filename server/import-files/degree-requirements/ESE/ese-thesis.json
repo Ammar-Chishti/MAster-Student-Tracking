@@ -1,0 +1,180 @@
+{
+    "department": "ESE",
+    "track": "Thesis",
+    "semester": "Spring",
+    "year": 2021,
+    "requirements": [
+        {
+            "credits": {
+                "overall": 30,
+                "restrictions": [
+                    {
+                        "max": 12,
+                        "list": [
+                            "ESE 597",
+                            "ESE 599",
+                            "ESE 698"
+                        ]
+                    },
+                    {
+                        "max": 3,
+                        "list": [
+                            "ESE 698"
+                        ]
+                    },
+                    {
+                        "max": 3,
+                        "list": [
+                            "ESE 597"
+                        ]
+                    }
+                ]
+            },
+            "desc": "30 graduate credits, max 12 from ESE 597,599,698, max 3 from ESE 698, max 3 from ESE 597"
+        },
+        {
+            "GPA": {
+                "overall": 3.0,
+                "department": 3.0
+            },
+            "desc": "3.0 GPA overall and department"
+        },
+        {
+            "thesis": {
+                "credits": 6,
+                "list": [
+                    "ESE 599"
+                ]
+            },
+            "desc": "6 credits of ESE 599"
+        },
+        {
+            "required": [
+                "ESE 536",
+                "CSE 536",
+                "ESE 545",
+                "ESE 566",
+                "ESE 587"
+            ],
+            "desc": "1 course in hardware"
+        },
+        {
+            "required": [
+                "ESE 505",
+                "ESE 506",
+                "ESE 546",
+                "ESE 548"
+            ],
+            "desc": "1 course in networking"
+        },
+        {
+            "required": [
+                "ESE 507",
+                "ESE 530",
+                "ESE 549",
+                "ESE 555",
+                "ESE 556",
+                "ESE 575"
+            ],
+            "desc": "1 course in CAD and VLSI"
+        },
+        {
+            "required": [
+                "AMS 542",
+                "ESE 501",
+                "ESE 533",
+                "ESE 534",
+                "ESE 543",
+                "ESE 554",
+                "ESE 558",
+                "ESE 588",
+                "ESE 589",
+                "CSE 506",
+                "CSE 526",
+                "CSE 548"
+            ],
+            "desc": "1 course in theory and software"
+        },
+        {
+            "required": [
+                "AMS 542",
+                "ESE 501",
+                "ESE 533",
+                "ESE 534",
+                "ESE 543",
+                "ESE 554",
+                "ESE 558",
+                "ESE 588",
+                "ESE 589",
+                "CSE 506",
+                "CSE 526",
+                "CSE 548"
+            ],
+            "desc": "1 course in theory and software"
+        },
+        {
+            "required": [
+                "ESE 597"
+            ],
+            "desc": "1-3 credits of ESE 597"
+        },
+        {
+            "elective": [
+                "ESE 536",
+                "CSE 536",
+                "ESE 545",
+                "ESE 566",
+                "ESE 587",
+                "ESE 505",
+                "ESE 506",
+                "ESE 546",
+                "ESE 548",
+                "ESE 507",
+                "ESE 530",
+                "ESE 549",
+                "ESE 555",
+                "ESE 556",
+                "ESE 575",
+                "ESE 501",
+                "ESE 533",
+                "ESE 534",
+                "ESE 543",
+                "ESE 554",
+                "ESE 558",
+                "ESE 588",
+                "ESE 589",
+                "ESE 670"
+            ],
+            "desc": "1 regular lecture course"
+        },
+        {
+            "elective": [
+                "ESE 536",
+                "CSE 536",
+                "ESE 545",
+                "ESE 566",
+                "ESE 587",
+                "ESE 505",
+                "ESE 506",
+                "ESE 546",
+                "ESE 548",
+                "ESE 507",
+                "ESE 530",
+                "ESE 549",
+                "ESE 555",
+                "ESE 556",
+                "ESE 575",
+                "ESE 501",
+                "ESE 533",
+                "ESE 534",
+                "ESE 543",
+                "ESE 554",
+                "ESE 558",
+                "ESE 588",
+                "ESE 589",
+                "ESE 670"
+            ],
+            "desc": "1 regular lecture course"
+        }
+    ]
+}

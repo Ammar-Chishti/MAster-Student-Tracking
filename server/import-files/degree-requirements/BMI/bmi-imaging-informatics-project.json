@@ -1,0 +1,98 @@
+{
+    "department": "BMI",
+    "track": "Imaging Informatics with Project",
+    "semester": "Spring",
+    "year": 2021,
+    "requirements":
+    [
+        {
+            "credits": {
+                "overall": 30,
+                "department": 18,
+                "restrictions": [
+                    {
+                        "max": 3,
+                        "list": [
+                            "BMI 503",
+                            "BMI 502"
+                        ]
+                    },
+                    {
+                        "max": 6,
+                        "list": [
+                            "BMI 596",
+                            "BMI 696"
+                        ]
+                    },
+                    {
+                        "max": 6,
+                        "list": [
+                            "BMI 598"
+                        ]
+                    },
+                    {
+                        "max": 0,
+                        "list": [
+                            "BMI 599"
+                        ]
+                    }
+                ]
+            },
+            "desc": "30 graduate credits, 18 department credits, max 3 from BMI 502, 503, max 6 from BMI 596, 696, max 6 from BMI 598,  max 0 from BMI 599"
+        },
+        {
+            "GPA": {
+                "overall": 3.0
+            },
+            "desc": "3.0 GPA overall"
+        },
+        {
+            "required": [
+                "BMI 501"
+            ],
+            "desc": "required course: BMI 501"
+        },
+        {
+            "required": [
+                "BMI 502",
+                "BMI 503"
+            ],
+            "desc": "required course: BMI 501 or BMI 503"
+        },
+        {
+            "required": [
+                "BMI 513"
+            ],
+            "desc": "required course: BMI 513"
+        },
+        {
+            "required": [
+                "BMI 540"
+            ],
+            "desc": "required course: BMI 540"
+        },
+        {
+            "elective": [
+                "BMI 514", "BMI 517", "BMI 520", "BMI 530"
+            ],
+            "desc": "1 elective"
+        },
+        {
+            "semesters": {
+                "course": [
+                    "BMI 592"
+                ],
+                "count": -1
+            }
+        },
+        {
+            "project": {
+                "credits": 6,
+                "list": [
+                    "BMI 598"
+                ]
+            },
+            "desc": "6 credits of BMI 598"
+        }
+    ]
+}

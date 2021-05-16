@@ -1,0 +1,103 @@
+{
+    "department": "AMS",
+    "track": "Statistics",
+    "semester": "Spring",
+    "year": 2021,
+    "requirements": [
+        {
+            "credits": {
+                "overall": 30
+            },
+            "desc": "30 graduate credits overall"
+        },
+        {
+            "GPA": {
+                "overall": 3.0,
+                "requiredOverall": 3.0,
+                "creditsAbove": {
+                    "GPA": 3.0,
+                    "count": 18
+                }
+            },
+            "desc": "3.0 GPA overall, 3.0 GPA in core courses, 3.0 in 18 credits"
+        },
+        {
+            "required": [
+                "AMS 507"
+            ],
+            "desc": "required course: AMS 507"
+        },
+        {
+            "required": [
+                "AMS 510"
+            ],
+            "desc": "required course: AMS 510"
+        },
+        {
+            "required": [
+                "AMS 570"
+            ],
+            "desc": "required course: AMS 570"
+        },
+        {
+            "required": [
+                "AMS 571"
+            ],
+            "desc": "required course: AMS 571"
+        },
+        {
+            "required": [
+                "AMS 572"
+            ],
+            "desc": "required course: AMS 572"
+        },
+        {
+            "required": [
+                "AMS 573"
+            ],
+            "desc": "required course: AMS 573"
+        },
+        {
+            "required": [
+                "AMS 578"
+            ],
+            "desc": "required course: AMS 578"
+        },
+        {
+            "required": [
+                "AMS 582"
+            ],
+            "desc": "required course: AMS 582"
+        },
+        {
+            "required": [
+                "AMS 597"
+            ],
+            "desc": "required course: AMS 597"
+        },
+        {
+            "elective": [
+                "AMS 595",
+                "AMS 580",
+                "AMS 586",
+                "AMS 588",
+                "AMS 598",
+                "AMS 550",
+                "AMS 560"
+            ],
+            "desc": "1 elective"
+        },
+        {
+            "elective": [
+                "AMS 595",
+                "AMS 580",
+                "AMS 586",
+                "AMS 588",
+                "AMS 598",
+                "AMS 550",
+                "AMS 560"
+            ],
+            "desc": "1 elective"
+        }
+    ]
+}

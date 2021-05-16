@@ -1,0 +1,94 @@
+{
+    "department": "BMI",
+    "track": "Clinical Informatics with Thesis",
+    "semester": "Spring",
+    "year": 2021,
+    "requirements":
+    [
+        {
+            "credits": {
+                "overall": 21,
+                "department": 18,
+                "restrictions": [
+                    {
+                        "max": 3,
+                        "list": [
+                            "BMI 503",
+                            "BMI 502"
+                        ]
+                    },
+                    {
+                        "max": 6,
+                        "list": [
+                            "BMI 596",
+                            "BMI 696"
+                        ]
+                    },
+                    {
+                        "max": 0,
+                        "list": [
+                            "BMI 598"
+                        ]
+                    }
+                ]
+            },
+            "desc": "21 graduate credits, 18 department credits, max 3 from BMI 502, 503, max 6 from BMI 596, 696, max 0 from BMI 598"
+        },
+        {
+            "GPA": {
+                "overall": 3.0
+            },
+            "desc": "3.0 GPA overall"
+        },
+        {
+            "required": [
+                "BMI 501"
+            ],
+            "desc": "required course: BMI 501"
+        },
+        {
+            "required": [
+                "BMI 502",
+                "BMI 503"
+            ],
+            "desc": "required course: BMI 501 or BMI 503"
+        },
+        {
+            "required": [
+                "BMI 512"
+            ],
+            "desc": "required course: BMI 512"
+        },
+        {
+            "required": [
+                "BMI 540"
+            ],
+            "desc": "required course: BMI 540"
+        },
+        {
+            "elective": [
+                "BMI 517", "BMI 520", "BMI 530", "BMI 550", "BMI 551", "BMI 552"
+            ],
+            "desc": "1 elective"
+        },
+        {
+            "semesters": {
+                "course": [
+                    "BMI 592"
+                ],
+                "count": -1
+            }
+        },
+        {
+            "thesis": {
+                "creditMax": 12,
+                "creditMin": 1,
+                "credits": 6,
+                "list": [
+                    "BMI 599"
+                ]
+            },
+            "desc": "max 12 credits of BMI 599"
+        }
+    ]
+}
