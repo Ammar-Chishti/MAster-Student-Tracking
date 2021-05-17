@@ -1,6 +1,6 @@
 # MAster Student Tracking (MAST)
 
-Remote system accessible at https://ma-st.herokuapp.com/ (You still have to download the github repo and import the courses, course offerings, degree requirements, and student data however)
+Remote system accessible at https://ma-st.herokuapp.com/ (You still have to clone the github repo and import the courses, course offerings, degree requirements, and student data however)
 
 MAST is a full stack web application system that helps M.S. students and graduate program directors (GPDs) determine whether students are on track to satisfy degree requirements for their respective major by their planned graduation date. The system will also help departmental administrative staff know when to clear a student for graduation. This was a project I completed along with three other students for the capstone course CSE 416.
 
@@ -34,22 +34,22 @@ Note - Make sure you use https://localhost:8000 instead of http://localhost:8000
 
 ## Project Images
 
-* Login Screen <br> ![Login Screen](./Project-Images/Login_Screen.png)
+* Login Screen <br> ![Login Screen](./project-images/Login_Screen.png)
 
-* Import Page <br> ![Import Page](./Project-Images/Import_Page.png)
+* Import Page <br> ![Import Page](./project-images/Import_Page.png)
 
-* GPD Home Page <br> ![GPD Home Page](./Project-Images/GPD_Home_Page.png)
+* GPD Home Page <br> ![GPD Home Page](./project-images/GPD_Home_Page.png)
 
-* GPD Home Page with Degree Status <br> ![GPD Home Page with Degree Status](./Project-Images/GPD_Home_Page_DS.png)
+* GPD Home Page with Degree Status <br> ![GPD Home Page with Degree Status](./project-images/GPD_Home_Page_DS.png)
 
-* Student Home Page <br> ![Student Home Page](./Project-Images/Student_Home_Page.png)
+* Student Home Page <br> ![Student Home Page](./project-images/Student_Home_Page.png)
 
-* Student Degree Progress <br> ![Student Degree Progress](./Project-Images/Student_Degree_Progress.png)
+* Student Degree Progress <br> ![Student Degree Progress](./project-images/Student_Degree_Progress.png)
 
-* Suggest Course Plan <br> ![Suggest Course Plan](./Project-Images/Suggest_Course_Plan.png)
+* Suggest Course Plan <br> ![Suggest Course Plan](./project-images/Suggest_Course_Plan.png)
 
-* Courses Page <br> ![Courses Page](./Project-Images/Courses_Page.png)
+* Courses Page <br> ![Courses Page](./project-images/Courses_Page.png)
 
-* Course Offerings Page <br> ![Course Offerings Page](./Project-Images/Course_Offerings_Page.png)
+* Course Offerings Page <br> ![Course Offerings Page](./project-images/Course_Offerings_Page.png)
 
-* Enrollment Trends <br> ![Enrollment Trends](./Project-Images/Enrollment_Trends.png)
+* Enrollment Trends <br> ![Enrollment Trends](./project-images/Enrollment_Trends.png)
